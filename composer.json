@@ -1,0 +1,22 @@
+{
+    "name": "valadanchik/blockchain",
+    "description": "Blockchain API With HD functionality",
+    "keywords": ["bitcoin", "blockchain", "laravel"],
+    "homepage": "https://github.com/Valadanchik/Blockchain-API-with-HD.git",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Blockchain\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "ext-bcmath": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0.2"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
