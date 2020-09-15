@@ -10,7 +10,7 @@ Getting Started
 This php library works with the [Composer](https://getcomposer.org/) package manager. Install it into your project by running the following command.
 
 ```
-$ composer require blockchain/blockchain
+$ composer require valadanchik/blockchain dev-master
 ```
 
 In order to use Wallet and CreateWallet functionality, you must provide an URL to an instance of [service-my-wallet-v3](https://github.com/blockchain/service-my-wallet-v3).

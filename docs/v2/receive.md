@@ -14,7 +14,7 @@ Generate
 Call `ReceiveV2->generate` on a `Blockchain` object. Pass a v2 API key, xpub and callback URL. Returns a `ReceiveResponse` object.
 
 ```php
-$blockchain = new \Blockchain\Blockchain($apiKey);
+$blockchain = new \Valadanchik\Blockchain($apiKey);
 
 $v2ApiKey = 'myApiKey';
 $xpub = 'xpubYourXPub';
