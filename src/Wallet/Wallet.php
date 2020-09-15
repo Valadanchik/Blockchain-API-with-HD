@@ -73,7 +73,6 @@ class Wallet
 
     public function getAddresses()
     {
-        dd(4);
         $json = $this->call('list');
         $addresses = array();
         foreach ($json['addresses'] as $address) {
