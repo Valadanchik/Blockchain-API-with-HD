@@ -165,7 +165,6 @@ class Wallet
     }
 
     public function receivingAddressHD($xpub = NULL){
-        dd(4);
         //use xpub of the default account if xpub is not supplied
         $xpub = (is_null($xpub)) ? $this->listXpubs()[0] : $xpub;
         if(empty($xpub)){
