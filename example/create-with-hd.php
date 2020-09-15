@@ -9,7 +9,7 @@
 
     $Blockchain = new \Blockchain\Blockchain($api_code);
 
-    $wallet = $Blockchain->Create->create('weakPassword01!', null, null, 'true');
+    $wallet = $Blockchain->Create->create('weakPassword01!', 'true', null, null);
 
     var_dump($wallet);
 

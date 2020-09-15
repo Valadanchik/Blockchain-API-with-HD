@@ -12,21 +12,21 @@ class Create
         $this->blockchain = $blockchain;
     }
 
-    public function create($password, $email = null, $label = null, $hd=null)
+    public function create($password, $hd=null, $email = null, $label = null)
     {
-        return $this->doCreate($password, null, $email, $label, $hd);
+        return $this->doCreate($password, $hd. null, $email, $label);
     }
 
-    public function createWithKey($password, $privKey, $email = null, $label = null, $hd=null)
+    public function createWithKey($password, $privKey, $hd=null, $email = null, $label = null)
     {
         if (!isset($privKey) || is_null($privKey)) {
             throw new ParameterError("Private Key required.");
         }
 
-        return $this->doCreate($password, $privKey, $email, $label, $hd);
+        return $this->doCreate($password, $hd, $privKey, $email, $label);
     }
 
-    public function doCreate($password, $priv = null, $email = null, $label = null, $hd=null)
+    public function doCreate($password, $hd=null, $priv = null, $email = null, $label = null)
     {
         if (!isset($password) || is_null($password)) {
             throw new ParameterError("Password required.");

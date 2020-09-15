@@ -30,7 +30,7 @@ $wallet = $Blockchain->Create->createWithKey($password, $privKey, $email=null, $
 Create a new HD wallet with a known private key. Returns a `WalletResponse` object.
 
 ```php
-$wallet = $Blockchain->Create->createWithKey($password, $privKey, $email=null, $label=null, $hd='true');
+$wallet = $Blockchain->Create->createWithKey($password, $privKey, $hd='true', $email=null, $label=null);
 ```
 
 ### Create without Key
@@ -43,7 +43,7 @@ $wallet = $Blockchain->Create->create($password, $email=null, $label=null);
 Create a new HD wallet, letting Blockchain generate a new private key. Returns a `WalletResponse` object.
 
 ```php
-$wallet = $Blockchain->Create->create($password, $email=null, $label=null, $hd='true');
+$wallet = $Blockchain->Create->create($password, $hd='true', $email=null, $label=null);
 ```
 
 
