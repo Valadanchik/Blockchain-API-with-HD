@@ -73,6 +73,7 @@ class Wallet
 
     public function getAddresses()
     {
+        dd(4);
         $json = $this->call('list');
         $addresses = array();
         foreach ($json['addresses'] as $address) {
@@ -165,6 +166,7 @@ class Wallet
     }
 
     public function receivingAddressHD($xpub = NULL){
+        dd(4);
         //use xpub of the default account if xpub is not supplied
         $xpub = (is_null($xpub)) ? $this->listXpubs()[0] : $xpub;
         if(empty($xpub)){
@@ -181,7 +183,7 @@ class Wallet
             throw new ParameterError('Invalid xpub. Please enter correct wallet xpub.');
         }else{
             $json = $this->call('accounts/'.$xpub.'/balance');
-            return \Blockchain\Conversion\Conversion::BTC_int2str($json['balance']);
+            return \Blockchain\Conversion\Conversion::btcInt2Str($json['balance']);
         }
     }
 }
