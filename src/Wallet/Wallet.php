@@ -166,7 +166,7 @@ class Wallet
 
     public function receivingAddressHD($xpub = NULL){
         //use xpub of the default account if xpub is not supplied
-        $xpub = (is_null($xpub)) ? $this->listXpubs()[0] : $xpub;
+        $xpub = (is_null($xpub)) ? $this->listXpubsHD()[0] : $xpub;
         if(empty($xpub)){
             throw new ParameterError('Invalid xpub. Please enter correct wallet xpub.');
         }else{
@@ -176,12 +176,12 @@ class Wallet
 
     public function getBalanceHD($xpub =  NULL)
     {
-        $xpub = (is_null($xpub)) ? $this->listXpubs()[0] : $xpub;
+        $xpub = (is_null($xpub)) ? $this->listXpubsHD()[0] : $xpub;
         if(empty($xpub)){
             throw new ParameterError('Invalid xpub. Please enter correct wallet xpub.');
         }else{
             $json = $this->call('accounts/'.$xpub.'/balance');
-            return \Blockchain\Conversion\Conversion::btcInt2Str($json['balance']);
+            return Conversion::btcInt2Str($json['balance']);
         }
     }
 }
