@@ -124,6 +124,8 @@ class Wallet
         );
         if (!is_null($from_address)) {
             $params['from'] = $from_address;
+        }else{
+            $params['from'] = 0;
         }
         if (!is_null($fee)) {
             $params['fee'] = Conversion::btcFloat2Int($fee);
