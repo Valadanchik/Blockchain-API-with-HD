@@ -45,5 +45,8 @@ class PaymentResponse
         if (array_key_exists('warning', $json)) {
             $this->notice = $json['warning'];
         }
+        if (array_key_exists('success', $json)) {
+            $this->success = $json['success'];
+        }
     }
 }
