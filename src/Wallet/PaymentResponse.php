@@ -48,5 +48,8 @@ class PaymentResponse
         if (array_key_exists('success', $json)) {
             $this->success = $json['success'];
         }
+        if (array_key_exists('fee', $json)) {
+            $this->fee = $json['fee'];
+        }
     }
 }
