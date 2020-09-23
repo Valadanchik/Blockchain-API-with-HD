@@ -49,7 +49,7 @@ class PaymentResponse
             $this->success = $json['success'];
         }
         if (array_key_exists('fee', $json)) {
-            $this->fee = $json['fee'];
+            $this->fee = $json['fee']/100000000;
         }
     }
 }
